@@ -1,0 +1,167 @@
+/* CSS Kulanım Yöntemleri */
+
+/* Yorum satırı
+win -> ctrl + k + c
+mac -> cmd + k + c
+*/
+
+/* Yorum Satırı Kapatma
+win -> ctrl + k + u
+mac -> cmd + k + u
+*/
+
+/* 
+1) Inline CSS
+
+HTML elementinin içine yazılı, style attribute'u ile kullanılır.
+
+Dezavantajı : Büyük projelerde önerilmez. 
+Tek bir öğe değişecek ise stil vermek kolaydır.
+
+Örn; <h1 style="color: red;">Merhaba CSS Dünyası</h1>
+*/
+
+/* 
+2) Internal CSS 
+
+HTML dosyasının <head> kısmına yazdığımız yer
+
+<style>
+  CSS kodları buraya yazılır
+</style>
+
+
+Küçük projelerde kullanışlı fakat harici bir 
+css dosyası açmaya gerke kalmaz.
+
+Dezavantajı: CSS, yalnızca o HTML dosyasında geçerli olur. 
+Büyük projelerde tekrar kullanımı zorlaştırır.
+*/
+
+/* 
+3) External CSS
+
+Ayrı bir css dosyası ile yazılır ve HTML'e .... ile bağlantısı yapılır.
+
+secici {
+  ozellik: deger
+}
+
+*/
+
+/* p {
+  background-color: lightskyblue;
+  font-size: 30px;
+} */
+
+/* Seçici önünde . veya # olmadığı zaman kod şöyle çalışır. 
+Spesifik olarak hangi etikete veya elemana erişeceğini bilmediğinden
+sayfadaki tüm elemanlara / etiketlere erişir (hangisini yazdıysak) */
+
+/* ID ve Class kullanımları
+
+ID -> Bir öğeye özgü - spesifik tanımlama yapmak için kullanılır.
+ID'ler # (diez) sembolü ile seçilir
+*/
+
+/* #ilk-paragraf {
+  color: white;
+  background-color: black;
+} */
+
+/* Class -> Birden fazla öğeye uygulanabilir
+Genel stiller oluşturmak için kullanılır
+
+Class'lar . (nokta) sembolü ile seçilir.
+
+Aynı class'ı bir çok yerde kullanabiliriz. kodu sadece tutabiliriz
+Dezavantajı: spesifik olarak bir öğeyi seçmek zordur.
+*/
+
+/* .kutu {
+  background-color: lightsalmon;
+  padding: 30px;
+  color: white;
+} */
+
+/* Kutu class'ının içindeki p'ye eriş */
+/* .kutu p {
+  color: red;
+  background-color: white;
+}
+
+.kutu-text {
+  font-size: 50px;
+}
+
+.text {
+  background-color: red;
+}
+
+.text-long {
+  color: yellow;
+} */
+
+/* 
+Tür seçicileri  
+h1, p, a vb.. gibi öğeler-etiketler
+
+Class Seçicileri
+.(className classİsmi) 
+
+ID Seçiciler
+#(idName idİsmi)
+*/
+
+/* Margin ve Padding */
+
+.margin-kutu {
+  /* uygulandığı yeri genellikle itmek için kullanırız */
+  background-color: lightseagreen;
+
+  
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px; 
+ 
+
+  /* margin: 25px 150px 50px 50px; */
+  /* Margin'in sıralaması -> top right bottom left
+  saat yönünde ilerler */
+
+  /* yukarıdaki kodun kısa hali 
+  4 tane değer alır
+  fakat değerler aynı ise sadece 1 tane yazmak yeterlidir. */
+}
+
+.padding-kutu {
+  /* uygulandığı yeri genellikle genişletmek için kullanırız */
+  background-color: lightcoral;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  margin-bottom: 100px;
+}
+
+
+/* {} -> scope */
+.kare {
+  background-color: skyblue;
+  width: 100px ; /* genişlik */
+  height: 100px ; /* yükseklik */
+
+  margin-left: 100px;
+
+  border: 5px solid black;
+
+  /* 
+  border 3 özellik alır. 
+  ilk olarak çerçeve genişliği sonra
+  çerçeve özelliği - türü daha sonra
+  çerçeve rengi
+  */
+}
